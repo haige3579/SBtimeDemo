@@ -1,0 +1,1 @@
+include ':app', ':preference', ':intent', ':share'
