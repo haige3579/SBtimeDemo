@@ -1,5 +1,6 @@
 package com.cyh.sbtimedemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -81,5 +82,25 @@ public class IntentActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    /**
+     * 三 2在activity中Handle发送过来的Intent   最好在onCreate或onStart处理
+     */
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent intent=getIntent();
+        Uri data = intent.getData();
+        if (intent.getType().indexOf("image/")!=-1){
+            //处理图片
+        }else if (intent.getType().equals("text/plain")){
+            //处理文本
+        }
+
+        // 3返回Result到原来的activity
+        Intent result=new Intent("com.cyh.sbtimedemo.RESULT_ACTION",Uri.parse("content://result_uri"));
+        setResult(Activity.RESULT_OK,result);
+        finish();
     }
 }

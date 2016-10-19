@@ -1,1 +1,1 @@
-include ':app', ':preference', ':intent', ':share'
+include ':app', ':preference', ':intent', ':share', ':goodman'

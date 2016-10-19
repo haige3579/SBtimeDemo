@@ -16,7 +16,34 @@
             </intent-filter>
         </activity>
         <activity android:name=".IntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="sms"/>
+                <data android:scheme="smsto"/>
+            </intent-filter>
         </activity>
+        <activity android:name=".sharehandle.ShareSimpleData"/>
+        <activity android:name=".sharehandle.ShareFileActivity"/>
+
+        <provider
+            android:authorities=".sharehandle.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                       android:resource="@xml/filepaths"/>
+        </provider>
     </application>
 
 </manifest>
