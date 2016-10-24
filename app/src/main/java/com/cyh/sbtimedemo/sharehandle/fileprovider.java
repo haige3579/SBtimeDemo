@@ -7,7 +7,7 @@ import android.net.Uri;
 import android.support.annotation.Nullable;
 
 /**
- *   学习内容提供者 --ContentPriovider
+ *   内容提供者 --ContentPriovider
  *
  * Created by CYH on 2016/10/19.
  */
@@ -44,4 +44,6 @@ public class fileprovider extends ContentProvider {
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         return 0;
     }
+
+
 }
