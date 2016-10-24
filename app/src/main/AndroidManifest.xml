@@ -2,11 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.cyh.sbtimedemo">
 
-    <!-- 权限-->
+    <!-- 权限 -->
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
 
+    <!-- 拍照 ，相机不是应用正常运行所必须组件（required="false"） -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -43,13 +50,31 @@
         <activity android:name=".sharehandle.ShareFileActivity"/>
 
         <provider
-            android:authorities=".sharehandle.fileprovider"
             android:name="android.support.v4.content.FileProvider"
-            android:grantUriPermissions="true"
-            android:exported="false">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                       android:resource="@xml/filepaths"/>
+            android:authorities=".sharehandle.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
         </provider>
+
+        <activity android:name=".multimedia.AudioActivity">
+        </activity>
+
+        <receiver
+            android:name=".RemoteControlReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".multimedia.PhotosActivity">
+        </activity>
+        <activity android:name=".multimedia.PrintingActivity">
+        </activity>
     </application>
-  
+
 </manifest>
