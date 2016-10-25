@@ -11,10 +11,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/goodman" />
-            <option value="$PROJECT_DIR$/intent" />
-            <option value="$PROJECT_DIR$/lockpatternview" />
-            <option value="$PROJECT_DIR$/preference" />
-            <option value="$PROJECT_DIR$/share" />
           </set>
         </option>
         <option name="myModules">
@@ -22,10 +18,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/goodman" />
-            <option value="$PROJECT_DIR$/intent" />
-            <option value="$PROJECT_DIR$/lockpatternview" />
-            <option value="$PROJECT_DIR$/preference" />
-            <option value="$PROJECT_DIR$/share" />
           </set>
         </option>
       </GradleProjectSettings>

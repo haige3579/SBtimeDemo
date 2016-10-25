@@ -1,1 +1,1 @@
-include ':app', ':preference', ':intent', ':share', ':goodman', ':lockpatternview'
+include ':app', ':goodman'

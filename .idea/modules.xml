@@ -5,10 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/SBtimeDemo.iml" filepath="$PROJECT_DIR$/SBtimeDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/goodman/goodman.iml" filepath="$PROJECT_DIR$/goodman/goodman.iml" />
-      <module fileurl="file://$PROJECT_DIR$/intent/intent.iml" filepath="$PROJECT_DIR$/intent/intent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lockpatternview/lockpatternview.iml" filepath="$PROJECT_DIR$/lockpatternview/lockpatternview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/preference/preference.iml" filepath="$PROJECT_DIR$/preference/preference.iml" />
-      <module fileurl="file://$PROJECT_DIR$/share/share.iml" filepath="$PROJECT_DIR$/share/share.iml" />
     </modules>
   </component>
 </project>
