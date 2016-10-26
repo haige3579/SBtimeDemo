@@ -75,6 +75,8 @@
         </activity>
         <activity android:name=".multimedia.PrintingActivity">
         </activity>
+        <activity android:name=".GraphicsAnimation.BitmapActivity">
+        </activity>
     </application>
 
 </manifest>
