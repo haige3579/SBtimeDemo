@@ -90,7 +90,7 @@ public class OpenGLES20Activity extends AppCompatActivity {
             mTriangle.draw();
         }
        // 8.2 辅助方法
-        public static int loadShader(int type,String shaderCode){
+        public  int loadShader(int type,String shaderCode){
             int shader=GLES20.glCreateShader(type);
             GLES20.glShaderSource(shader,shaderCode);
             GLES20.glCompileShader(shader);
@@ -104,7 +104,7 @@ public class OpenGLES20Activity extends AppCompatActivity {
         private final int mProgram;
         private FloatBuffer vertexBuffer;
         static final int COORDS_PER_VERTEX=3;
-        static float triangleCoords[] = {   // in counterclockwise order:
+         float triangleCoords[] = {   // in counterclockwise order:
                 0.0f,  0.622008459f, 0.0f, // top
                 -0.5f, -0.311004243f, 0.0f, // bottom left
                 0.5f, -0.311004243f, 0.0f  // bottom right
@@ -117,11 +117,11 @@ public class OpenGLES20Activity extends AppCompatActivity {
             vertexBuffer.put(triangleCoords);
             vertexBuffer.position(0);
             //8.3 编译着色器代码
-            int vertexShader=MyGLRenderer.loadShader(GLES20.GL_VERTEX_SHADER,vertexShaderCode);
-            int fragmentShader=MyGLRenderer.loadShader(GLES20.GL_FRAGMENT_SHADER,fragmentShaderCode);
+//            int vertexShader=MyGLRenderer.loadShader(GLES20.GL_VERTEX_SHADER,vertexShaderCode);
+//            int fragmentShader=MyGLRenderer.loadShader(GLES20.GL_FRAGMENT_SHADER,fragmentShaderCode);
             mProgram=GLES20.glCreateProgram();
-            GLES20.glAttachShader(mProgram,vertexShader);
-            GLES20.glAttachShader(mProgram,fragmentShader);
+//            GLES20.glAttachShader(mProgram,vertexShader);
+//            GLES20.glAttachShader(mProgram,fragmentShader);
             GLES20.glLinkProgram(mProgram);
         }
 
@@ -150,7 +150,7 @@ public class OpenGLES20Activity extends AppCompatActivity {
         private FloatBuffer vertexBuffer;
         private ShortBuffer drawListBuffer;
         static final int COORDS_PER_VERTEX=3;
-        static float squareCoords[] = {   // in counterclockwise order:
+         float squareCoords[] = {   // in counterclockwise order:
                 -0.5f,  0.5f, 0.0f,   // top left
                 -0.5f, -0.5f, 0.0f,   // bottom left
                 0.5f, -0.5f, 0.0f,   // bottom right
