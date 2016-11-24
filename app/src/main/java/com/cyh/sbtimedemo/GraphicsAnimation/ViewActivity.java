@@ -13,7 +13,9 @@ public class ViewActivity extends AppCompatActivity {
      *@cyh    添加动画
     *         a  View间渐变
     *         b  ViewPage实现屏幕滑动
-     *
+    *        c 展示Card翻转动画
+    *         d 缩放动画
+    *         e 布局变更动画
      *created at 2016/11/16 17:11
      */
     private View mContentView;
